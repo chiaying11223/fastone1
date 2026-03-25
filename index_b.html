@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastone - Official Game Website | Speed & Victory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="styles_b.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="text-white">Fast</span><span class="text-red">One</span>
+            <span class="games-badge">GAMES</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="active" data-translate="nav_home">HOME</a>
+            <a href="#about" data-translate="nav_company">COMPANY</a>
+            <a href="games_b.html" data-translate="nav_games">GAMES</a>
+            <a href="#contact" data-translate="nav_contact">CONTACT US</a>
+        </nav>
+        <div class="nav-actions">
+            <!-- Language Picker -->
+            <div class="language-picker">
+                <button class="lang-btn">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="ENG" class="flag-icon">
+                    <span>ENG</span>
+                    <i class="arrow-down"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="#" class="lang-item active" data-lang="eng"><img src="https://flagcdn.com/w40/gb.png" alt="ENG"> ENG</a>
+                    <a href="#" class="lang-item" data-lang="cn"><img src="https://flagcdn.com/w40/cn.png" alt="CN"> CN</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/th.png" alt="THAI"> THAI</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/id.png" alt="IDN"> IDN</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/vn.png" alt="VN"> VN</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/mm.png" alt="MM"> MM</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/jp.png" alt="JP"> JP</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/br.png" alt="PT"> PT</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/es.png" alt="ES"> ES</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/kr.png" alt="KR"> KR</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="badge-tag" data-translate="hero_badge">NEW GAME</div>
+            <h1 class="glitch" data-text="COIN TREE" data-translate="hero_title">COIN TREE</h1>
+            <div class="game-stats">
+                <div class="stat-item"><span data-translate="hero_max_win">MAX WIN</span> <span class="highlight">888X</span></div>
+                <div class="stat-item"><span data-translate="hero_volatility">VOLATILITY</span> <span class="highlight">LOW MED</span></div>
+            </div>
+            <p data-translate="hero_desc">Experience the ultimate speed limit and enjoy victory right at your fingertips.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" data-translate="btn_play">PLAY NOW</button>
+                <button class="btn-secondary" data-translate="btn_details">DETAILS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-glowing-backdrop"></div>
+        <div class="about-text">
+            <h2 data-translate="about_title">INNOVATIVE MECHANICS, PURSUING EXCELLENCE</h2>
+            <p data-translate="about_desc">The Fastone team is dedicated to creating the best and original games (Video Slots, Bingo, Table Games, Fishing, etc.). We insist on excellence and innovation, providing players with fast integration, exciting tournaments, and accumulated jackpots.</p>
+        </div>
+        <div class="stats-bar-container">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">100<span class="plus">+</span></span>
+                    <span class="stat-label" data-translate="stat_1">HTML5 Games</span>
+                </div>
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <span class="stat-number">10<span class="plus">+</span></span>
+                    <span class="stat-label" data-translate="stat_2">Game Certifications</span>
+                </div>
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <span class="stat-number">50<span class="plus">+</span></span>
+                    <span class="stat-label" data-translate="stat_3">Currencies Supported</span>
+                </div>
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <span class="stat-number">12<span class="plus">+</span></span>
+                    <span class="stat-label" data-translate="stat_4">Languages Supported</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="section-title">
+            <h2><span data-translate="games_title">POPULAR</span> <span style="color:var(--neon-red)" data-translate="games_sub">GAMES</span></h2>
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="slots" data-translate="cat_slots">SLOT</button>
+                <button class="tab-btn" data-category="fishing" data-translate="cat_fishing">FISHING</button>
+                <button class="tab-btn" data-category="table" data-translate="cat_table">TABLE & CARD</button>
+                <button class="tab-btn" data-category="bingo" data-translate="cat_bingo">BINGO</button>
+                <button class="tab-btn" data-category="casino" data-translate="cat_casino">CASINO</button>
+            </div>
+        </div>
+
+        <div class="games-grid">
+            <!-- Card 1: Lucky Jaguar -->
+            <div class="game-card" data-category="slots">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Slot_Lucky Jaguar_1.png" alt="Lucky Jaguar">
+                        <div class="card-overlay">
+                            <h3>LUCKY JAGUAR</h3>
+                            <p>MAX WIN 8888X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Money Pot -->
+            <div class="game-card" data-category="slots">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Slot_Money Pot_1.png" alt="Money Pot">
+                        <div class="card-overlay">
+                            <h3>MONEY POT</h3>
+                            <p>MAX WIN 10000X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Fortune Zombie -->
+            <div class="game-card" data-category="fishing">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Fish_FORTUNE ZOMBIE_1.png" alt="Fortune Zombie">
+                        <div class="card-overlay">
+                            <h3>FORTUNE ZOMBIE</h3>
+                            <p>MAX WIN 500X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Ultimate Texas Hold'e -->
+            <div class="game-card" data-category="table">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Card_Ultimate Texas Hold'e_1.png" alt="Ultimate Texas Hold'e">
+                        <div class="card-overlay">
+                            <h3>ULTIMATE TEXAS HOLD'E</h3>
+                            <p>TABLE GAME</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Magic Lamp Bingo -->
+            <div class="game-card" data-category="bingo">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Bingo_Magic Lamp Bingo_1.png" alt="Magic Lamp Bingo">
+                        <div class="card-overlay">
+                            <h3>MAGIC LAMP BINGO</h3>
+                            <p>BINGO GAME</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-title">
+            <h2><span data-translate="service_title">OUR</span> <span style="color:var(--neon-red)" data-translate="service_sub">SERVICES</span></h2>
+        </div>
+        <div class="services-bar">
+            <!-- 1 -->
+            <div class="service-item">
+                <div class="service-icon">🏆</div>
+                <h3 data-translate="service_t1">Tournament System</h3>
+                <p data-translate="service_p1">Easily set up and update live tournament events. Drive player interaction, competition, and engagement with real-time leaderboards.</p>
+            </div>
+            <div class="stat-divider"></div>
+
+            <!-- 2 -->
+            <div class="service-item">
+                <div class="service-icon">🎯</div>
+                <h3 data-translate="service_t2">Must Hit By Jackpot</h3>
+                <p data-translate="service_p2">Our signature jackpot mechanic guarantees a winner before the jackpot reaches its target — making every spin more thrilling than the last.</p>
+            </div>
+            <div class="stat-divider"></div>
+
+            <!-- 3 -->
+            <div class="service-item">
+                <div class="service-icon">🔗</div>
+                <h3 data-translate="service_t3">Linking Jackpot</h3>
+                <p data-translate="service_p3">All players across all operators share a single growing jackpot pool. Collective excitement, bigger prizes, and maximum engagement for every platform.</p>
+            </div>
+            <div class="stat-divider"></div>
+
+            <!-- 4 -->
+            <div class="service-item">
+                <div class="service-icon">🤖</div>
+                <h3 data-translate="service_t4">AI & Data Intelligence</h3>
+                <p data-translate="service_p4">Our AI engine analyses player behaviour daily to optimise retention, personalise game recommendations, and surface the right promotions at the right time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h1 class="contact-title" data-translate="contact_title">CONTACT US</h1>
+            <div class="contact-subtitle">
+                <h3 data-translate="contact_sub1">We're a pretty friendly bunch.</h3>
+                <p data-translate="contact_sub2">Reach out to us and we'll happily answer any questions you may have.</p>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Name" required>
+                    <input type="text" placeholder="COMPANY">
+                </div>
+                <input type="email" placeholder="Email*" required>
+                <textarea placeholder="Your Question" rows="5" required></textarea>
+                <button type="submit" class="contact-submit" data-translate="contact_submit">Submit</button>
+            </form>
+
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <span data-translate="contact_email">jili-service@jiligames.com</span></p>
+                <p class="interest-text" data-translate="contact_interest">If you are interested in integrating our quality content, Friend our sales on Telegram below</p>
+            </div>
+
+            <div class="telegram-grid">
+                <div class="tg-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/supernovaJL" alt="QR 1">
+                    <span>@supernovaJL</span>
+                </div>
+                <div class="tg-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/ja_jiligames" alt="QR 2">
+                    <span>@ja_jiligames</span>
+                </div>
+               <div class="tg-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/Lumiere6508" alt="QR 3">
+                    <span>@Lumiere6508</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Col 1: Logo & Info -->
+            <div class="footer-col col-info">
+                <div class="footer-logo">
+                    <span class="text-white">Fast</span><span class="text-red">One</span>
+                    <span class="games-badge">GAMES</span>
+                </div>
+                <p class="footer-desc">A group of experienced gaming developers dedicated to creating the best and most original games in pursuit of excellence and innovation.</p>
+                <p class="footer-contact">✉️ info@fastone.com</p>
+                <p class="footer-contact">✈️ Telegram: @fastone_games</p>
+            </div>
+            
+            <!-- Col 2: Games -->
+            <div class="footer-col">
+                <h4 data-translate="footer_games">GAMES</h4>
+                <a href="#games">Slot</a>
+                <a href="#games">Fishing</a>
+                <a href="#games">Table & Card</a>
+                <a href="#games">Bingo</a>
+                <a href="#games">Casino</a>
+            </div>
+
+            <!-- Col 3: Company -->
+            <div class="footer-col">
+                <h4 data-translate="footer_company">COMPANY</h4>
+                <a href="#about">About Us</a>
+                <a href="#">Certifications</a>
+                <a href="#">API Integration</a>
+                <a href="#">Press & Media</a>
+            </div>
+
+            <!-- Col 4: Support -->
+            <div class="footer-col">
+                <h4 data-translate="footer_support">SUPPORT</h4>
+                <a href="#contact">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">24/7 Live Support</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copy">
+                <p>© 2026 Fastone Gaming Corp. All Rights Reserved.</p>
+            </div>
+            <div class="badges">
+                <span class="badge">SSL SECURE</span>
+                <span class="badge">RNG CERTIFIED</span>
+                <span class="badge">18+</span>
+            </div>
+        </div>
+    </footer>
+    <!-- Demo Overlay -->
+    <div class="demo-overlay" id="demoOverlay">
+        <!-- Floating Back Button -->
+        <button class="floating-back-btn" id="demoBackBtn">← BACK</button>
+
+        <!-- 4-Quadrant Grid Container -->
+        <div class="demo-grid-container">
+            
+            <!-- 1. Top Left: Interactive Game Viewer -->
+            <div class="grid-item item-game">
+                <div class="game-frame" id="gameFrame">
+                    <div class="game-screen-mock">
+                        <button class="btn-frame-fs" id="frameFsBtn" title="Full Screen">⛶</button>
+                        <img src="" alt="Game Banner" class="game-banner" id="demoGameBanner">
+                        <div class="game-controls-overlay" id="demoStartOverlay">
+                            <div class="game-title-gold" id="demoGameTitleFrame">GAME TITLE</div>
+                            <button class="btn-continue" id="demoStartBtn">Continue</button>
+                        </div>
+                        <div class="interactive-game-area" id="interactiveArea" style="display:none;">
+                            <div class="slot-machine">
+                                <div class="reel" id="reel1">🍒</div><div class="reel" id="reel2">🍋</div><div class="reel" id="reel3">🔔</div>
+                            </div>
+                            <button class="btn-spin" id="spinBtn">SPIN</button>
+                            <div class="win-message" id="winMessage"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Top Right: Game Info Dashboard -->
+            <div class="grid-item item-info">                <!-- Grid Content Section strictly aligned with Screenshot layout -->
+                <div class="demo-info-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; text-align: left; align-items: start;">
+                    
+                    <!-- Left Column: Specs and Card setup -->
+                    <div class="info-grid-contents">
+                        <h2 id="demoGameTitle" style="margin-bottom: 12px; font-size: 2rem; font-family: 'Orbitron', sans-serif;">Game Title</h2>
+                        
+                        <!-- Stacked Summary Cards -->
+                        <div class="dash-summary-cards" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px;">
+                            <div class="summary-card" style="background: rgba(26, 28, 35, 0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 12px; text-align: center;">
+                                <div style="font-size: 0.8rem; color: #a1a1a1; text-transform: uppercase; font-weight: 500;">MAX WIN</div>
+                                <div id="demoGameMaxWin" style="font-size: 1.3rem; color: #ffa500; font-weight: bold; margin-top: 5px;">-</div>
+                            </div>
+                            <div class="summary-card" style="background: rgba(26, 28, 35, 0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 12px; text-align: center;">
+                                <div style="font-size: 0.8rem; color: #a1a1a1; text-transform: uppercase; font-weight: 500;">VOLATILITY</div>
+                                <div id="demoGameVolatility" style="font-size: 1.2rem; color: #ffa500; font-weight: bold; margin-top: 5px; display: flex; justify-content: center; align-items: center; gap: 4px;">-</div>
+                            </div>
+                        </div>
+
+                        <!-- Table Specification Layout (WITHOUT DIVIDER LINES) -->
+                        <div class="specs-table" style="width: 100%; text-align: left; margin-bottom: 15px;">
+                            <div style="display: flex; padding: 8px 0;">
+                                <div style="width: 150px; color: #ffa500; font-weight: bold; font-size: 0.95rem;">Type of game</div>
+                                <div id="demoGameType" style="color: #fff; font-size: 0.95rem;">Slot</div>
+                            </div>
+                            <div style="display: flex; padding: 8px 0;">
+                                <div style="width: 150px; color: #ffa500; font-weight: bold; font-size: 0.95rem;">Special Features</div>
+                                <div id="demoSpecs" style="color: #fff; font-size: 0.95rem; line-height: 1.4;">-</div>
+                            </div>
+                            <div style="display: flex; padding: 8px 0;">
+                                <div style="width: 150px; color: #ffa500; font-weight: bold; font-size: 0.95rem;">Paylines</div>
+                                <div id="demoPaylines" style="color: #fff; font-size: 0.95rem;">-</div>
+                            </div>
+                            <div style="display: flex; padding: 8px 0;">
+                                <div style="width: 150px; color: #ffa500; font-weight: bold; font-size: 0.95rem;">Publish Time</div>
+                                <div id="demoPublishTime" style="color: #fff; font-size: 0.95rem;">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Large Thumbnail Image -->
+                    <div class="info-grid-image" style="display: flex; align-items: stretch; justify-content: center;">
+                        <img id="demoGameLogo" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 0 15px rgba(255,18,18,0.35)); max-width: 280px; align-self: center;" alt="Game Banner">
+                    </div>
+
+                </div>
+
+                <!-- Supported Languages Footer Card -->
+                <div class="lang-support-box" style="background: rgba(45, 47, 56, 0.75); border-radius: 10px; padding: 12px; margin-top: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="font-size: 0.85rem; color: #a1a1a1; margin-bottom: 10px; font-weight: 500;">Supported Languages</div>
+                    <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                        <img src="https://flagcdn.com/w40/gb.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="UK">
+                        <img src="https://flagcdn.com/w40/cn.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="CN">
+                        <img src="https://flagcdn.com/w40/th.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="TH">
+                        <img src="https://flagcdn.com/w40/id.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="ID">
+                        <img src="https://flagcdn.com/w40/vn.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="VN">
+                        <img src="https://flagcdn.com/w40/mm.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="MM">
+                        <img src="https://flagcdn.com/w40/jp.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="JP">
+                        <img src="https://flagcdn.com/w40/br.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="BR">
+                        <img src="https://flagcdn.com/w40/es.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="ES">
+                        <img src="https://flagcdn.com/w40/kr.png" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;" alt="KR">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- 3. Bottom Left: Gameplay Video Preview -->
+            <div class="grid-item item-video glass-panel">
+                <h3 class="dash-title">▶ PREVIEW VIDEO</h3>
+                <div class="video-container-b">
+                    <div class="video-placeholder-mini">
+                        <button class="btn-play-youtube" title="Play Preview"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Bottom Right: Game Image Gallery -->
+            <div class="grid-item item-gallery glass-panel">
+                <h3 class="dash-title">🖼 GAMEPLAY IMAGES</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=300" alt="Screen 1"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=300" alt="Screen 2"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1518893883960-45c65b4f7943?q=80&w=300" alt="Screen 3"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?q=80&w=300" alt="Screen 4"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    <!-- Lightbox Overlay for Image Zoom -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <button class="lightbox-prev" id="lightboxPrev">&lt;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Zoom-View">
+        </div>
+        <button class="lightbox-next" id="lightboxNext">&gt;</button>
+    </div>
+
+    <script src="theme_customizer.js"></script>
+    <script src="main_b.js"></script>
+</body>
+</html>
