@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastone Games - ALL GAMES | Speed & Victory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="styles_b.css">
+    <!-- FontAwesome for Search Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom Styles for Catalog Subpage to separate it beautifully */
+        .catalog-hero {
+            padding: 140px 0 60px;
+            background: linear-gradient(to bottom, rgba(10,10,12,0.8), rgba(6,6,8,0.95)), url('https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1600') center/cover;
+            text-align: center;
+            border-bottom: 2px solid rgba(255,18,18,0.1);
+            position: relative;
+        }
+        .catalog-hero::before {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 60px;
+            background: linear-gradient(to bottom, transparent, #060608);
+        }
+        .catalog-title {
+            font-size: 3.5rem; font-family: 'Orbitron', sans-serif; font-weight: 900;
+            color: #fff; text-shadow: 0 0 20px rgba(255,18,18,0.5); letter-spacing: 4px;
+            margin-bottom: 15px; text-transform: uppercase;
+        }
+        .catalog-toolbar {
+            max-width: 1200px; margin: -40px auto 40px; padding: 20px 30px;
+            background: rgba(18, 18, 22, 0.95); border: 1.5px solid rgba(255,18,18,0.2);
+            border-radius: 12px; backdrop-filter: blur(10px); z-index: 10;
+            display: flex; justify-content: space-between; align-items: center; gap: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 25px rgba(255,18,18,0.1);
+            position: relative;
+        }
+        .search-box {
+            display: flex; align-items: center; background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 15px;
+            width: 350px; transition: 0.3s;
+        }
+        .search-box:focus-within {
+            border-color: var(--neon-red); box-shadow: 0 0 12px rgba(255,18,18,0.4);
+            background: rgba(0,0,0,0.4);
+        }
+        .search-box i { color: #888; margin-right: 12px; font-size: 1.1rem; }
+        .search-box input {
+            background: transparent; border: none; color: #fff; font-size: 0.95rem;
+            width: 100%; outline: none; font-family: 'Rajdhani', sans-serif;
+        }
+        .search-box input::placeholder { color: #666; }
+        
+        /* Grid Sizing Tweaks for full view */
+        .catalog-grid-wrapper {
+            max-width: 1300px; margin: 0 auto 80px; padding: 0 20px;
+        }
+        .games-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        @media (max-width: 900px) {
+            .catalog-toolbar { flex-direction: column; align-items: stretch; margin-top: 20px; }
+            .search-box { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Same as index_b) -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="text-white">Fast</span><span class="text-red">One</span>
+            <span class="games-badge">GAMES</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index_b.html#home" data-translate="nav_home">HOME</a>
+            <a href="index_b.html#about" data-translate="nav_company">COMPANY</a>
+            <a href="#" class="active" data-translate="nav_games">GAMES</a>
+            <a href="index_b.html#contact" data-translate="nav_contact">CONTACT US</a>
+        </nav>
+        <div class="nav-actions">
+            <!-- Language Picker -->
+            <div class="language-picker">
+                <button class="lang-btn">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="ENG" class="flag-icon">
+                    <span>ENG</span>
+                    <i class="arrow-down"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="#" class="lang-item active" data-lang="eng"><img src="https://flagcdn.com/w40/gb.png" alt="ENG"> ENG</a>
+                    <a href="#" class="lang-item" data-lang="cn"><img src="https://flagcdn.com/w40/cn.png" alt="CN"> CN</a>
+                    <a href="#" class="lang-item" data-lang="eng"><img src="https://flagcdn.com/w40/th.png" alt="THAI"> THAI</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalog Hero Section -->
+    <section class="catalog-hero">
+        <h1 class="catalog-title" data-translate="games_title">ALL GAMES</h1>
+        <p style="color: #a1a1a1; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem;">Explore full catalog of exciting titles and exclusive games.</p>
+    </section>
+
+    <!-- Toolbar Filters -->
+    <div class="catalog-toolbar">
+        <div class="category-tabs" style="margin-bottom: 0;">
+            <button class="tab-btn active" data-category="all" data-translate="cat_all">ALL</button>
+            <button class="tab-btn" data-category="slots" data-translate="cat_slots">SLOT</button>
+            <button class="tab-btn" data-category="fishing" data-translate="cat_fishing">FISHING</button>
+            <button class="tab-btn" data-category="table" data-translate="cat_table">TABLE & CARD</button>
+            <button class="tab-btn" data-category="bingo" data-translate="cat_bingo">BINGO</button>
+        </div>
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="gameSearch" placeholder="Search games...">
+        </div>
+    </div>
+
+    <!-- Catalog Cards Grid -->
+    <div class="catalog-grid-wrapper">
+        <div class="games-grid" id="catalogGrid">
+            <!-- Card 1: Lucky Jaguar -->
+            <div class="game-card" data-category="slots" data-name="lucky jaguar">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Slot_Lucky Jaguar_1.png" alt="Lucky Jaguar">
+                        <div class="card-overlay">
+                            <h3>LUCKY JAGUAR</h3>
+                            <p>MAX WIN 8888X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Money Pot -->
+            <div class="game-card" data-category="slots" data-name="money pot">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Slot_Money Pot_1.png" alt="Money Pot">
+                        <div class="card-overlay">
+                            <h3>MONEY POT</h3>
+                            <p>MAX WIN 10000X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Fortune Zombie -->
+            <div class="game-card" data-category="fishing" data-name="fortune zombie">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Fish_FORTUNE ZOMBIE_1.png" alt="Fortune Zombie">
+                        <div class="card-overlay">
+                            <h3>FORTUNE ZOMBIE</h3>
+                            <p>MAX WIN 500X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Ultimate Texas Hold'e -->
+            <div class="game-card" data-category="table" data-name="ultimate texas hold'e">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Card_Ultimate Texas Hold'e_1.png" alt="Ultimate Texas Hold'e">
+                        <div class="card-overlay">
+                            <h3>ULTIMATE TEXAS HOLD'E</h3>
+                            <p>TABLE GAME</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Magic Lamp Bingo -->
+            <div class="game-card" data-category="bingo" data-name="magic lamp bingo">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Bingo_Magic Lamp Bingo_1.png" alt="Magic Lamp Bingo">
+                        <div class="card-overlay">
+                            <h3>MAGIC LAMP BINGO</h3>
+                            <p>BINGO GAME</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Extra populated cards for Catalog effect (duplicates with dummy variants just to feel rich) -->
+            <div class="game-card" data-category="slots" data-name="lucky jaguar gold">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Slot_Lucky Jaguar_1.png" style="filter: hue-rotate(45deg)" alt="Lucky Jaguar Gold">
+                        <div class="card-overlay">
+                            <h3>LUCKY JAGUAR GOLD</h3>
+                            <p>MAX WIN 15000X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" data-category="slots" data-name="money pot mega">
+                <div class="scifi-border">
+                    <div class="card-inner">
+                        <img src="image/Slot_Money Pot_1.png" style="filter: hue-rotate(180deg)" alt="Money Pot Mega">
+                        <div class="card-overlay">
+                            <h3>MONEY POT MEGA</h3>
+                            <p>MAX WIN 12000X</p>
+                            <button class="btn-play">PLAY DEMO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer (Same as index_b) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Col 1: Logo & Info -->
+            <div class="footer-col col-info">
+                <div class="footer-logo">
+                    <span class="text-white">Fast</span><span class="text-red">One</span>
+                    <span class="games-badge">GAMES</span>
+                </div>
+                <p class="footer-desc">A group of experienced gaming developers dedicated to creating the best and most original games in pursuit of excellence and innovation.</p>
+                <p class="footer-contact">✉️ info@fastone.com</p>
+                <p class="footer-contact">✈️ Telegram: @fastone_games</p>
+            </div>
+            <!-- Col 2: Games -->
+            <div class="footer-col">
+                <h4>GAMES</h4>
+                <a href="#">Slot</a><a href="#">Fishing</a><a href="#">Table & Card</a><a href="#">Bingo</a>
+            </div>
+            <!-- Col 3: Company -->
+            <div class="footer-col">
+                <h4>COMPANY</h4>
+                <a href="index_b.html#about">About Us</a><a href="#">Certifications</a><a href="#">API</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copy"><p>© 2026 Fastone Gaming Corp. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <!-- Demo Overlay Requirements for Play Demo functionality inside Catalog -->
+    <div class="demo-overlay" id="demoOverlay">
+        <button class="floating-back-btn" id="demoBackBtn">← BACK</button>
+        <div class="demo-grid-container">
+            <!-- 1. Top Left: Interactive Game Viewer -->
+            <div class="grid-item item-game">
+                <div class="game-frame" id="gameFrame">
+                    <div class="game-screen-mock">
+                        <button class="btn-frame-fs" id="frameFsBtn" title="Full Screen">⛶</button>
+                        <img src="" alt="Game Banner" class="game-banner" id="demoGameBanner">
+                        <div class="game-controls-overlay" id="demoStartOverlay">
+                            <div class="game-title-gold" id="demoGameTitleFrame">GAME TITLE</div>
+                            <button class="btn-continue" id="demoStartBtn">Continue</button>
+                        </div>
+                        <div class="interactive-game-area" id="interactiveArea" style="display:none;">
+                            <div class="slot-machine">
+                                <div class="reel" id="reel1">🍒</div><div class="reel" id="reel2">🍋</div><div class="reel" id="reel3">🔔</div>
+                            </div>
+                            <button class="btn-spin" id="spinBtn">SPIN</button>
+                            <div class="win-message" id="winMessage"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2. Top Right: Game Info Dashboard -->
+            <div class="grid-item item-info">
+                <div class="demo-info-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; text-align: left; align-items: start;">
+                    <div class="info-grid-contents">
+                        <h2 id="demoGameTitle" style="margin-bottom: 12px; font-size: 2rem; font-family: 'Orbitron', sans-serif;">Game Title</h2>
+                        <div class="dash-summary-cards" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px;">
+                            <div class="summary-card" style="background: rgba(26, 28, 35, 0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 12px; text-align: center;">
+                                <div style="font-size: 0.8rem; color: #a1a1a1;">MAX WIN</div>
+                                <div id="demoGameMaxWin" style="font-size: 1.3rem; color: #ffa500; font-weight: bold;">-</div>
+                            </div>
+                        </div>
+                        <div class="specs-table" style="width: 100%; text-align: left;">
+                            <div style="display: flex; padding: 8px 0;">
+                                <div style="width: 150px; color: #ffa500; font-weight: bold;">Type of game</div>
+                                <div id="demoGameType" style="color: #fff;">Slot</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-grid-image">
+                        <img id="demoGameLogo" style="width: 100%; height: auto; border-radius: 8px;" alt="Game Banner">
+                    </div>
+                </div>
+            </div>
+            <!-- 3. Bottom Left: Video -->
+            <div class="grid-item item-video glass-panel">
+                <h3 class="dash-title">▶ PREVIEW VIDEO</h3>
+                <div class="video-container-b">Live Demo Previews not available</div>
+            </div>
+            <!-- 4. Bottom right: Image Gallery -->
+            <div class="grid-item item-gallery glass-panel">
+                <h3 class="dash-title">🖼 GAMEPLAY IMAGES</h3>
+                <div class="gallery-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Structure -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <button class="lightbox-prev" id="lightboxPrev">&lt;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Zoom-View">
+        </div>
+        <button class="lightbox-next" id="lightboxNext">&gt;</button>
+    </div>
+
+    <!-- Script triggers -->
+    <script src="theme_customizer.js"></script>
+    <script src="main_b.js"></script>
+    <script>
+        // Catalog-Specific Search Functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("gameSearch");
+            const catalogGridCards = document.querySelectorAll("#catalogGrid .game-card");
+
+            if (searchInput) {
+                searchInput.addEventListener("input", (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    const activeTab = document.querySelector(".catalog-toolbar .tab-btn.active");
+                    const activeCategory = activeTab ? activeTab.getAttribute("data-category") : "all";
+
+                    catalogGridCards.forEach(card => {
+                        const name = card.getAttribute("data-name") || card.querySelector("h3").innerText.toLowerCase();
+                        const cat = card.getAttribute("data-category");
+
+                        const matchesQuery = name.includes(query);
+                        const matchesCat = (activeCategory === "all" || cat === activeCategory);
+
+                        if (matchesQuery && matchesCat) {
+                            card.style.display = "block";
+                            card.style.opacity = "1";
+                            card.style.transform = "scale(1)";
+                        } else {
+                            card.style.opacity = "0";
+                            card.style.transform = "scale(0.8)";
+                            setTimeout(() => { 
+                                if (card.style.opacity === "0") card.style.display = "none"; 
+                            }, 200);
+                        }
+                    });
+                });
+            }
+
+            // Bind Category triggers inside toolbar for Catalog
+            const catalogTabs = document.querySelectorAll(".catalog-toolbar .tab-btn");
+            catalogTabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    catalogTabs.forEach(t => t.classList.remove("active"));
+                    tab.classList.add("active");
+
+                    const activeCategory = tab.getAttribute("data-category");
+                    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+
+                    catalogGridCards.forEach(card => {
+                        const name = card.getAttribute("data-name") || card.querySelector("h3").innerText.toLowerCase();
+                        const cat = card.getAttribute("data-category");
+
+                        const matchesQuery = name.includes(query);
+                        const matchesCat = (activeCategory === "all" || cat === activeCategory);
+
+                        if (matchesQuery && matchesCat) {
+                            card.style.display = "block";
+                            setTimeout(() => { card.style.opacity = "1"; card.style.transform = "scale(1)"; }, 50);
+                        } else {
+                            card.style.opacity = "0"; card.style.transform = "scale(0.8)";
+                            setTimeout(() => { if (card.style.opacity === "0") card.style.display = "none"; }, 200);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
